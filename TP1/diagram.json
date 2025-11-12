@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "TP1",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": -100, "left": 200, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 54, "left": 253.4, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 90.65,
+      "left": 181,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:VIN", "servo1:V+", "red", [ "h-43.4", "v-199" ] ],
+    [ "esp:D13", "servo1:PWM", "green", [ "h-24.2", "v-170.5" ] ],
+    [ "esp:D2", "led1:A", "blue", [ "h0" ] ],
+    [ "led1:C", "r1:1", "black", [ "h0" ] ],
+    [ "esp:GND.1", "r1:2", "black", [ "h0" ] ],
+    [ "esp:GND.2", "servo1:GND", "black", [ "h-62.6", "v-199" ] ]
+  ],
+  "dependencies": {}
+}
