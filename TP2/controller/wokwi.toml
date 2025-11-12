@@ -1,0 +1,10 @@
+[wokwi]
+version = 1
+# Paths are relative to this project folder
+elf = ".pio/build/esp32dev/firmware.elf"
+firmware = ".pio/build/esp32dev/firmware.bin"
+
+# Forward local port -> device HTTP port (use a different local port per project to avoid conflicts)
+[[net.forward]]
+from = "localhost:8181"
+to = "target:80"
